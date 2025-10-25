@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ur">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Tube Light</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #021033;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .tube {
+            width: 70vw;
+            max-width: 700px;
+            height: 36px;
+            background: linear-gradient(90deg, #e9eef6, #ffffff, #e9eef6);
+            border-radius: 20px;
+            box-shadow:
+                0 0 18px rgba(10, 120, 255, 0.6),
+                0 0 45px rgba(10, 120, 255, 0.35),
+                inset 0 0 8px rgba(255, 255, 255, 0.9);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .tube::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 220px;
+            background: radial-gradient(closest-side, rgba(10, 120, 255, 0.25), rgba(10, 120, 255, 0.08), transparent 60%);
+            filter: blur(18px);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="tube"></div>
+    </div>
+</body>
+
+</html>
